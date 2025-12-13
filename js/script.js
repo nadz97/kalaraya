@@ -246,4 +246,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // meet the team photo handler 
+
+
+    const photoCols = document.querySelectorAll('.team-photo-col');
+
+    // Define the area at the top where the fade should happen.
+    // Since your title is there, 150px is a good starting point.
+    const fadeTriggerZone = 150;
+
+    function handlePhotoFade() {
+        photoCols.forEach(col => {
+            // Get position of the photo column relative to the viewport window
+            const rect = col.getBoundingClientRect();
+
+            // Check if the element is currently currently visible on screen
+            if (rect.bottom > 0 && rect.top < window.innerHeight) {
+                // If the top of the column is entering the "fade zone" near the top
+                if (rect.top < fadeTriggerZone) {
+                    // Calculate opacity: 0 when at top, 1 when at fadeTriggerZone boundary
+                    let newOpacity = (rect.top / fadeTriggerZone);
+                    // Ensure opacity stays strictly between 0 and 1
+                    newOpacity = Math.max(0, Math.min(1, newOpacity));
+                    col.style.opacity = newOpacity.toFixed(2);
+                } else {
+                    // If it's safely below the zone, ensure it's fully visible
+                    col.style.opacity = 1;
+                }
+            }
+        });
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', handlePhotoFade, { passive: true });
+    // Run once on load in case the page starts scrolled
+    handlePhotoFade();
+
+
 });

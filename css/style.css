@@ -350,34 +350,39 @@ body {
     }
 }
 
-/* Scope of Work Section */
+/* --- Base Container --- */
 .scope {
     padding: 8rem 0;
-    background-color: #F8F8F8;
-    /* Light Grey (Secondary + 5% Black approx) */
+    background-color: #fff;
+    overflow: hidden;
 }
 
+/* --- Timeline Container --- */
 .scope-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.scope-card {
-    background-color: var(--secondary);
-    padding: 3rem 2rem;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
-    border: 1px solid rgba(0, 0, 0, 0.02);
+    padding: 20px 0;
 
-    /* Animation Initial State */
+    /* Central Line */
+    background: linear-gradient(to bottom, #222, #222) no-repeat center/3px 100%;
+}
+
+/* --- The Card Item --- */
+.scope-card {
+    position: relative;
+    width: 50%;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+
+    /* Animation defaults */
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
 }
 
 .scope-card.visible {
@@ -385,36 +390,97 @@ body {
     transform: translateY(0);
 }
 
+/* --- Alternating Left/Right Logic --- */
+.scope-card:nth-child(odd) {
+    align-self: flex-start;
+    text-align: right;
+}
+
+.scope-card:nth-child(even) {
+    align-self: flex-end;
+    text-align: left;
+}
+
+/* --- The Middle Connection Dots --- */
+.scope-card::after {
+    content: '';
+    position: absolute;
+    top: 3.5rem;
+    /* Aligns dot near the icon */
+    width: 16px;
+    height: 16px;
+    background-color: #222;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.scope-card:nth-child(odd)::after {
+    right: -9.5px;
+}
+
+.scope-card:nth-child(even)::after {
+    left: -9.5px;
+}
+
+/* --- CONTENT STYLING (UPDATED SIZES) --- */
+
+/* 1. Icon */
 .scope-icon {
-    width: 60px;
-    height: 60px;
-    color: var(--primary);
-    margin-bottom: 2rem;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    color: #444;
+    margin-bottom: 1.5rem;
 }
 
-.scope-icon svg {
-    width: 100%;
-    height: 100%;
-}
-
+/* 2. Title (Made Bigger) */
 .scope-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--primary);
-    letter-spacing: 0.5px;
+    font-size: 2.2rem;
+    /* Increased from 1.5rem */
+    font-weight: 700;
+    color: #222;
     text-transform: uppercase;
+    margin: 0 0 1rem 0;
+    letter-spacing: 1px;
+    line-height: 1.2;
 }
 
-/* Scope Responsive */
-@media (max-width: 900px) {
+/* 3. Description (Made Bigger) */
+.scope-desc {
+    font-size: 1.3rem;
+    /* Increased from 1rem */
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* --- RESPONSIVE (Mobile) --- */
+@media (max-width: 768px) {
     .scope-grid {
-        grid-template-columns: repeat(2, 1fr);
+        background-position: left 20px center;
     }
-}
 
-@media (max-width: 500px) {
-    .scope-grid {
-        grid-template-columns: 1fr;
+    .scope-card {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 20px;
+        text-align: left !important;
+    }
+
+    .scope-card:nth-child(odd)::after,
+    .scope-card:nth-child(even)::after {
+        left: 10.5px;
+        right: auto;
+    }
+
+    /* Optional: Scale down slightly on mobile so it fits better */
+    .scope-title {
+        font-size: 1.8rem;
+    }
+
+    .scope-desc {
+        font-size: 1.1rem;
     }
 }
 
@@ -458,29 +524,44 @@ body {
     opacity: 1;
 }
 
-/* Gallery Section (Masonry) */
 .gallery {
     padding: 8rem 0;
     background-color: var(--secondary);
 }
 
+.container {
+    max-width: 1400px;
+    /* Adjust based on your design width */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* THE MASONRY CONTAINER */
 .gallery-masonry {
     column-count: 4;
     column-gap: 1rem;
+    /* Space between columns */
 }
 
+/* THE INDIVIDUAL ITEMS */
 .gallery-item {
-    margin-bottom: 1rem;
+    /* KEY FIX: These two lines prevent alignment glitches */
+    display: inline-block;
+    width: 100%;
+
+    /* Prevents items from being sliced between columns */
     break-inside: avoid;
+
+    margin-bottom: 1rem;
+    /* Space between rows */
+    border-radius: 1rem;
     overflow: hidden;
-    /* Keeps zoom inside container */
     position: relative;
     cursor: pointer;
-    border-radius: 1rem;
-    /* Softer, like reference */
 }
 
-/* Random Sizes */
+/* FIXED HEIGHT SIZES (As per your code) */
+/* Note: This crops images to fit the box */
 .gallery-item.tall {
     height: 400px;
 }
@@ -493,23 +574,26 @@ body {
     height: 180px;
 }
 
+/* IMAGE STYLING */
 .gallery-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* Ensures image covers the fixed height without stretching */
     display: block;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
+
+    /* Effects */
     filter: grayscale(100%);
-    /* Default grayscale */
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
 }
 
+/* HOVER EFFECTS */
 .gallery-item:hover .gallery-img {
     transform: scale(1.1);
-    /* Zoom effect */
     filter: grayscale(0%);
-    /* True color on hover */
 }
 
+/* RESPONSIVENESS */
 @media (max-width: 1024px) {
     .gallery-masonry {
         column-count: 3;
@@ -519,6 +603,12 @@ body {
 @media (max-width: 768px) {
     .gallery-masonry {
         column-count: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-masonry {
+        column-count: 1;
     }
 }
 
