@@ -19,9 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollPosition = window.scrollY;
         const windowHeight = window.innerHeight;
 
-        // Hero Fade Out Animation
-        // Opacity goes from 1 to 0 as we scroll down the first 50% of the viewport height
-        // This ensures it's fully gone before the next section fully covers it
         let opacity = 1 - (scrollPosition / (windowHeight * 0.5));
 
         // Clamp opacity between 0 and 1
@@ -31,9 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (heroContent) {
             heroContent.style.opacity = opacity;
         }
-
-        // Profile Parallax
-        // Profile Parallax - REMOVED for Stick Narrative Option
     });
 
     // Profile Text Reveal Observer
@@ -43,8 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             } else {
-                // Optional: Remove if we want re-trigger, for now keep it simple to just reveal
-                // entry.target.classList.remove('visible'); 
             }
         });
     }, { threshold: 0.2, rootMargin: "0px 0px -100px 0px" });
@@ -63,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Only animate once
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -75,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             } else {
-                // Remove visible to fade out when scrolling past
                 entry.target.classList.remove('visible');
             }
         });
@@ -85,17 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
         teamContentObserver.observe(block);
     });
 
-    // Team Description Scroll Fade (Smoother JS calculation)
     const teamDesc = document.querySelector('.team-desc');
     if (teamDesc) {
         window.addEventListener('scroll', () => {
             const rect = teamDesc.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            // Start fading when it goes into the top half of screen
-            // Simple logic: As it approaches top (0), opacity drops.
-            // Let's say fade starts at 200px from top and ends at 0.
             const fadeStart = 200;
-            const fadeEnd = 50; // Don't let it touch the header fully opaque
+            const fadeEnd = 50;
 
             let opacity = 1;
 
@@ -189,18 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update line width
             processFill.style.width = `${progress * 100}%`;
 
-            // Active State for Steps
-            // Logic: 
-            // Step 1: 0% -> Always active if we are here? Or starts at 0? Let's say it activates immediately.
-            // Step 2: > 33%
-            // Step 3: > 66%
-            // Step 4: > 90% or 100%
-
             processSteps.forEach((step, index) => {
-                // Determine threshold for each step
-                // 4 steps -> 3 intervals (0-33, 33-66, 66-100)
-                // Thresholds: 0, 0.33, 0.66, 0.95
-
                 let threshold = 0;
                 if (index === 1) threshold = 0.33;
                 if (index === 2) threshold = 0.66;
@@ -257,20 +232,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handlePhotoFade() {
         photoCols.forEach(col => {
-            // Get position of the photo column relative to the viewport window
             const rect = col.getBoundingClientRect();
 
-            // Check if the element is currently currently visible on screen
             if (rect.bottom > 0 && rect.top < window.innerHeight) {
-                // If the top of the column is entering the "fade zone" near the top
                 if (rect.top < fadeTriggerZone) {
-                    // Calculate opacity: 0 when at top, 1 when at fadeTriggerZone boundary
                     let newOpacity = (rect.top / fadeTriggerZone);
-                    // Ensure opacity stays strictly between 0 and 1
                     newOpacity = Math.max(0, Math.min(1, newOpacity));
                     col.style.opacity = newOpacity.toFixed(2);
                 } else {
-                    // If it's safely below the zone, ensure it's fully visible
                     col.style.opacity = 1;
                 }
             }

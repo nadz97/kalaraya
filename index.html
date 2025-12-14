@@ -18,7 +18,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <img src="images/LOGO_TRANSPARANT.png" alt="Kalaraya Logo" class="hero-logo">
-            <!-- <h1 class="hero-title">KALARAYA+ ARCHITECTS</h1> -->
+
         </div>
     </header>
 
@@ -33,12 +33,26 @@
                 </div>
                 <div class="profile-right">
                     <p class="text-body">
-                        Kalaraya+ Architects is a visionary studio dedicated to redefining the relationship between
-                        space and human experience. We believe that architecture is not merely about structure, but
-                        about creating atmospheres that evoke emotion and inspire contemplation.<br><br>
-                        Our approach is rooted in minimalism and honesty of materials. We strip away the unnecessary to
-                        reveal the essence of form and light, crafting environments that stand the test of time while
-                        remaining deeply connected to their context.
+                        Didirikan pada tahun 2022 oleh Muhammad Hary Raihan dan Maudy Indah Cahyani, Kalaraya hadir
+                        dengan komitmen untuk menciptakan karya yang tidak hanya indah secara estetika, tetapi juga
+                        fungsional dan
+                        penuh inovasi.
+
+                        Transformasi menjadi KALARAYA+ dimulai pada tahun 2025, dengan bergabungnya Adhitya Djarot dan
+                        Ilham
+                        Akbar ke dalam tim. Kolaborasi ini memperkuat struktur dan semangat baru kami dalam menghadirkan
+                        solusi
+                        arsitektur yang menyeluruh.
+
+                        <br><br>
+                        KALARAYA+ Architects siap memberikan layanan di bidang arsitektur, interior, perencanaan wilayah
+                        (plannologi), dan lingkungan, dengan pendekatan yang kontekstual, kolaboratif, dan
+                        berkelanjutan. Kami
+                        percaya bahwa setiap ruang memiliki potensi untuk menjadi bermakna—melampaui sekadar bentuk,
+                        menyentuh
+                        rasa, dan menciptakan dampak.
+
+                        Kami terus bergerak dengan semangat kolaborasi untuk mewujudkan #RasaDalamEstetika.
                     </p>
                 </div>
             </div>
@@ -294,14 +308,7 @@
                     <div class="why-sticky">
                         <img src="images/why_contextual.png" alt="Why Choose Us" class="why-img visible"
                             id="why-main-img">
-                        <!-- Preload/Opacity transition handling usually needs absolute positioning stacking, 
-                             but for simplicity we might swap src with transition or use multiple img tags. 
-                             Let's use a single img and fade logic, or background-image. 
-                             Better: Single img with CSS transition for opacity? No, src swap isn't smooth without 2 images.
-                             Let's use a background div for smoother transition or just strict src swap. 
-                             User asked for "smooth opacity fade".
-                             I will use a background-image approach on the div `.why-sticky` or a pseudo element.
-                        -->
+
                     </div>
                 </div>
             </div>
@@ -393,21 +400,64 @@
                 <div class="pricing-toggle-wrapper">
                     <button class="pricing-toggle active" data-target="architecture">ARCHITECTURE</button>
                     <button class="pricing-toggle" data-target="interior">INTERIOR</button>
+                    <button class="pricing-toggle" data-target="landscape">LANDSCAPE</button>
                 </div>
 
                 <!-- Content: Architecture -->
                 <div class="pricing-content active" id="pricing-architecture">
-                    <div class="pricing-card main-card">
-                        <h3 class="price-title">ARSITEKTUR LENGKAP</h3>
-                        <div class="price-amount">Rp 150.000<span class="price-unit">/ m²</span></div>
-                        <ul class="price-list">
-                            <li>Konsep Desain & 3D Rendering</li>
-                            <li>Gambar Kerja Lengkap (DED)</li>
-                            <li>RAB (Rencana Anggaran Biaya)</li>
-                            <li>Asistensi Revisi 3x</li>
-                            <li>Konsultasi Selama Pembangunan</li>
-                        </ul>
-                        <a href="#contact" class="btn-price">KONSULTASI SEKARANG</a>
+                    <div class="pricing-grid">
+                        <!-- Existing -->
+                        <div class="pricing-card">
+                            <h3 class="price-title">ARSITEKTUR LENGKAP</h3>
+                            <div class="price-amount">Rp 150.000<span class="price-unit">/ m²</span></div>
+                            <ul class="price-list">
+                                <li>Konsep Desain & 3D Rendering</li>
+                                <li>Gambar Kerja Lengkap (DED)</li>
+                                <li>RAB (Rencana Anggaran Biaya)</li>
+                                <li>Asistensi Revisi 3x</li>
+                                <li>Konsultasi Selama Pembangunan</li>
+                            </ul>
+                            <a href="#contact" class="btn-price">KONSULTASI SEKARANG</a>
+                        </div>
+                        <!-- New 1 -->
+                        <div class="pricing-card">
+                            <h3 class="price-title">KONSEP FASADE</h3>
+                            <div class="price-amount">Rp 75.000<span class="price-unit">/ m²</span></div>
+                            <ul class="price-list">
+                                <li>3D Modelling Eksterior</li>
+                                <li>Visualisasi 3D Rendering</li>
+                                <li>Gambar Tampak 2D</li>
+                                <li>Referensi Material</li>
+                                <li>Revisi 2x</li>
+                            </ul>
+                            <a href="#contact" class="btn-price">PILIH PAKET</a>
+                        </div>
+                        <!-- New 2 -->
+                        <div class="pricing-card">
+                            <h3 class="price-title">ARSITEKTUR PREMIUM</h3>
+                            <div class="price-amount">Rp 250.000<span class="price-unit">/ m²</span></div>
+                            <ul class="price-list">
+                                <li>Include Interior Layout</li>
+                                <li>Animasi Walkthrough Eksterior</li>
+                                <li>Detail Engineering Design (DED)</li>
+                                <li>Pengawasan Berkala</li>
+                                <li>Unlimited Minor Revisi</li>
+                            </ul>
+                            <a href="#contact" class="btn-price">PILIH PAKET</a>
+                        </div>
+                        <!-- New 3 -->
+                        <div class="pricing-card">
+                            <h3 class="price-title">RENOVASI RUMAH</h3>
+                            <div class="price-amount">Start Rp 5 Jt<span class="price-unit">/ Paket</span></div>
+                            <ul class="price-list">
+                                <li>Survey Eksisting</li>
+                                <li>Analisa Struktur Sederhana</li>
+                                <li>Desain Pengembangan Layout</li>
+                                <li>Gambar Kerja Renovasi</li>
+                                <li>Estimasi Biaya Renovasi</li>
+                            </ul>
+                            <a href="#contact" class="btn-price">PILIH PAKET</a>
+                        </div>
                     </div>
                 </div>
 
@@ -438,6 +488,76 @@
                                 <li>Pendampingan Belanja Furniture</li>
                             </ul>
                             <a href="#contact" class="btn-price btn-dark">PILIH PAKET</a>
+                        </div>
+                        <!-- New 1 -->
+                        <div class="pricing-card">
+                            <h3 class="price-title">COMMERCIAL SPACE</h3>
+                            <div class="price-amount">Rp 350.000<span class="price-unit">/ m²</span></div>
+                            <ul class="price-list">
+                                <li>Khusus Café / Kantor / Toko</li>
+                                <li>Analisa Flow Pengunjung</li>
+                                <li>Branding Implementation</li>
+                                <li>Detail Furniture Custom</li>
+                                <li>RAB & Spesifikasi Material</li>
+                            </ul>
+                            <a href="#contact" class="btn-price">PILIH PAKET</a>
+                        </div>
+                        <!-- New 2 -->
+                        <div class="pricing-card">
+                            <h3 class="price-title">DECOR & STYLING</h3>
+                            <div class="price-amount">Rp 150.000<span class="price-unit">/ m²</span></div>
+                            <ul class="price-list">
+                                <li>Tanpa Perubahan Dinding</li>
+                                <li>Pemilihan Furniture Loose</li>
+                                <li>Dekorasi & Soft Furnishing</li>
+                                <li>Color Palette Scheme</li>
+                                <li>Shopping List</li>
+                            </ul>
+                            <a href="#contact" class="btn-price">PILIH PAKET</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content: Landscape (New) -->
+                <div class="pricing-content" id="pricing-landscape">
+                    <div class="pricing-grid">
+                        <!-- Card 1 -->
+                        <div class="pricing-card">
+                            <h3 class="price-title">SMALL GARDEN</h3>
+                            <div class="price-amount">Rp 50.000<span class="price-unit">/ m²</span></div>
+                            <ul class="price-list">
+                                <li>Konsep Tanaman & Hardscape</li>
+                                <li>Layout Plan sederhana</li>
+                                <li>Jenis Tanaman Rekomendasi</li>
+                                <li>RAB Taman</li>
+                            </ul>
+                            <a href="#contact" class="btn-price">PILIH PAKET</a>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="pricing-card">
+                            <h3 class="price-title">RESIDENTIAL LANDSCAPE</h3>
+                            <div class="price-amount">Rp 100.000<span class="price-unit">/ m²</span></div>
+                            <ul class="price-list">
+                                <li>Desain Taman Depan & Belakang</li>
+                                <li>3D Visualisasi</li>
+                                <li>Detail Kolam / Fitur Air</li>
+                                <li>Lighting Plan Taman</li>
+                                <li>RAB Detail</li>
+                            </ul>
+                            <a href="#contact" class="btn-price">PILIH PAKET</a>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="pricing-card">
+                            <h3 class="price-title">KAWASAN / MASTERPLAN</h3>
+                            <div class="price-amount">Call Us<span class="price-unit">/ Ha</span></div>
+                            <ul class="price-list">
+                                <li>Perencanaan Site Plan</li>
+                                <li>Zoning & Sirkulasi</li>
+                                <li>Fasilitas Umum & Sosial</li>
+                                <li>3D Bird Eye View</li>
+                                <li>Video Animasi Kawasan</li>
+                            </ul>
+                            <a href="#contact" class="btn-price">HUBUNGI KAMI</a>
                         </div>
                     </div>
                 </div>
@@ -506,8 +626,7 @@
             </div>
         </section>
 
-        <!-- Placeholder for future sections -->
-        <!-- Removed placeholder to bring footer up -->
+
     </main>
 
     <!-- Footer Section -->

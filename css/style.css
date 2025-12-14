@@ -35,7 +35,6 @@ body {
     font-size: 4rem;
     font-weight: 900;
     color: #FFFFFF;
-    /* White for hero text as per request */
     letter-spacing: 2px;
     text-align: center;
 }
@@ -69,7 +68,6 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* Simple parallax */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +95,6 @@ body {
     position: relative;
     z-index: 10;
     margin-top: 100vh;
-    /* Push content below hero */
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -106,11 +103,9 @@ body {
     background-color: var(--secondary);
     padding: 8rem 2rem;
     min-height: auto;
-    /* Height is determined by content spacing now */
     display: flex;
     justify-content: center;
     overflow: visible;
-    /* Allow sticky to work */
 }
 
 .container {
@@ -138,7 +133,6 @@ body {
     display: flex;
     flex-direction: column;
     padding-bottom: 50vh;
-    /* Large space at bottom to keep title sticky while finishing text */
 }
 
 .text-body {
@@ -553,9 +547,7 @@ body {
     position: sticky;
     top: 5vh;
     z-index: 20;
-    /* Higher than photos (z-index 5) */
     background-color: transparent;
-    /* Transparent as requested */
     padding: 1rem 0;
     display: inline-block;
     width: 100%;
@@ -719,7 +711,6 @@ body {
 
 .why-block {
     min-height: 80vh;
-    /* Plenty of height as requested */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -984,6 +975,8 @@ body {
     position: relative;
     transition: transform 0.3s;
 }
+
+
 
 .pricing-card:hover {
     transform: translateY(-10px);
