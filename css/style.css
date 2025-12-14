@@ -427,10 +427,15 @@ body {
 /* 1. Icon */
 .scope-icon {
     display: inline-block;
-    width: 70px;
-    height: 70px;
-    color: #444;
+    width: 100px;
+    height: 100px;
     margin-bottom: 1.5rem;
+}
+
+.scope-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* 2. Title (Made Bigger) */
@@ -453,6 +458,48 @@ body {
     line-height: 1.6;
     margin: 0;
     font-weight: 400;
+}
+
+/* 4. List Styling */
+.scope-list {
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.scope-list li {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+/* Even Cards (Left Aligned) */
+.scope-card:nth-child(even) .scope-list li {
+    padding-left: 1.5rem;
+}
+
+.scope-card:nth-child(even) .scope-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    /* Use theme color */
+    font-weight: bold;
+}
+
+/* Odd Cards (Right Aligned) */
+.scope-card:nth-child(odd) .scope-list li {
+    padding-right: 1.5rem;
+}
+
+.scope-card:nth-child(odd) .scope-list li::after {
+    content: '•';
+    position: absolute;
+    right: 0;
+    color: var(--primary);
+    font-weight: bold;
 }
 
 /* --- RESPONSIVE (Mobile) --- */
@@ -481,6 +528,24 @@ body {
 
     .scope-desc {
         font-size: 1.1rem;
+    }
+
+    /* Reset List for Mobile (All Left Aligned) */
+    .scope-card:nth-child(odd) .scope-list li {
+        padding-right: 0;
+        padding-left: 1.5rem;
+    }
+
+    .scope-card:nth-child(odd) .scope-list li::after {
+        content: none;
+    }
+
+    .scope-card:nth-child(odd) .scope-list li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: bold;
     }
 }
 
