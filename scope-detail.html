@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Detail - Kalaraya+ Architects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 2rem 0;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+            break-inside: avoid;
+            margin-bottom: 20px;
+        }
+
+        .gallery-img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.02);
+        }
+
+        .gallery-desc {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 4px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        #service-title {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero" style="height: 40vh; min-height: 300px;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 style="color: white; font-size: 3rem;" id="service-title">Loading...</h1>
+        </div>
+    </header>
+
+    <main class="main-content"
+        style="margin-top: -50px; position: relative; z-index: 10; background: white; border-radius: 30px 30px 0 0; padding: 4rem 2rem;">
+        <div class="container">
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 2rem; color: #666;" id="service-desc">
+                <!-- Description injected here -->
+            </p>
+
+            <div id="gallery-container" class="gallery-grid">
+                <!-- Javascript will inject images here -->
+            </div>
+        </div>
+    </main>
+
+    <nav class="floating-nav">
+        <a href="index.html#hero" class="nav-link">Home</a>
+        <a href="index.html#profile" class="nav-link">Profile</a>
+        <a href="index.html#scope" class="nav-link">Scope</a>
+        <a href="index.html#team" class="nav-link">Team</a>
+        <a href="index.html#pricing" class="nav-link">Price</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="career.html" class="nav-link">Career</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Detail" class="lightbox-img" id="lightbox-img">
+    </div>
+
+    <script>
+        // Data for each service
+        const services = {
+            'architecture': {
+                title: 'Desain Arsitektur',
+                desc: 'Kami merancang bangunan yang kontekstual, estetis, dan fungsional. Berikut adalah beberapa karya desain arsitektur kami mulai dari hunian hingga bangunan komersial.',
+                images: [
+                    { src: 'images/gallery/gl1.jpg', desc: 'Modern Tropical House' },
+                    { src: 'images/gallery/gl5.jpg', desc: 'Industrial Cafe Concept' },
+                    { src: 'images/gallery/gl8.jpg', desc: 'Minimalist Facade Renovation' },
+                    { src: 'images/wp1.png', desc: 'Villa Design' }
+                ]
+            },
+            'interior': {
+                title: 'Desain Interior',
+                desc: 'Menciptakan suasana ruang yang nyaman dan berkarakter. Kami memperhatikan detail material, pencahayaan, dan ergonomi furniture.',
+                images: [
+                    { src: 'images/gallery/gl7.jpg', desc: 'Scandinavian Living Room' },
+                    { src: 'images/gallery/gl12.png', desc: 'Luxury Bedroom' },
+                    { src: 'images/gallery/gl2.jpg', desc: 'Compact Kitchen Set' }
+                ]
+            },
+            'masterplan': {
+                title: 'Masterplan & Landscape',
+                desc: 'Perencanaan kawasan dan tata ruang luar yang harmonis dengan alam.',
+                images: [
+                    { src: 'images/gallery/gl6.jpg', desc: 'Residential Complex Siteplan' },
+                    { src: 'images/wp3.png', desc: 'City Park Landscape' }
+                ]
+            },
+            'permit': {
+                title: 'Perizinan & Gambar Kerja',
+                desc: 'Dokumen teknis yang presisi untuk kebutuhan perizinan (PBG) dan panduan konstruksi yang akurat.',
+                images: [
+                    { src: 'images/gallery/gl3.jpg', desc: 'Detail Engineering Design' },
+                    { src: 'images/gallery/gl10.png', desc: 'Technical Drawing Layout' }
+                ]
+            },
+            'survey': {
+                title: 'Survey & Analisa GIS',
+                desc: 'Pemetaan lahan presisi tinggi menggunakan Drone dan teknologi GIS untuk data awal perencanaan yang akurat.',
+                images: [
+                    { src: 'images/gallery/gl9.png', desc: 'Site Survey Activity' },
+                    { src: 'images/wp5.png', desc: 'Aerial Mapping Process' }
+                ]
+            },
+            'environment': {
+                title: 'Analisa Lingkungan',
+                desc: 'Kajian dampak lingkungan untuk memastikan pembangunan yang keberlanjutan dan sesuai regulasi.',
+                images: [
+                    { src: 'images/team/4.png', desc: 'Environmental Assessment' }
+                ]
+            }
+        };
+
+        // Get URL params
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceId = urlParams.get('service') || 'architecture';
+
+        const data = services[serviceId];
+        const container = document.getElementById('gallery-container');
+        const titleEl = document.getElementById('service-title');
+        const descEl = document.getElementById('service-desc');
+
+        if (data) {
+            titleEl.textContent = data.title;
+            descEl.textContent = data.desc;
+
+            data.images.forEach(imgData => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                item.innerHTML = `
+                    <img src="${imgData.src}" class="gallery-img" alt="${imgData.desc}">
+                    <p class="gallery-desc">${imgData.desc}</p>
+                `;
+
+                // Lightbox click event
+                item.querySelector('img').addEventListener('click', () => {
+                    openLightbox(imgData.src);
+                });
+
+                container.appendChild(item);
+            });
+        } else {
+            titleEl.textContent = 'Service Not Found';
+            descEl.textContent = 'Please select a valid service from the homepage.';
+        }
+
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+        }
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+
+    </script>
+</body>
+
+</html>

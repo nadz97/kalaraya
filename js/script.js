@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Elements
     const heroContent = document.querySelector('.hero-content');
     const heroSection = document.querySelector('.hero');
-    const profileSection = document.querySelector('.profile');
-    const profileBg = document.querySelector('.profile-bg');
 
     // Scroll Handler
     window.addEventListener('scroll', () => {
@@ -36,16 +34,48 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-            } else {
             }
         });
-    }, { threshold: 0.2, rootMargin: "0px 0px -100px 0px" });
+    }, { threshold: 0.2, rootMargin: "0px" });
 
     profileTexts.forEach(text => {
         textObserver.observe(text);
     });
 
-    // Intersection Observer for other animations (Future use)
+    // Stats Counter Animation
+    const statsSection = document.querySelector('.profile-stats');
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let started = false;
+
+    const statsObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !started) {
+            started = true;
+            statNumbers.forEach(num => {
+                const target = parseInt(num.innerText);
+                const suffix = num.innerText.replace(/[0-9]/g, ''); // Get + or other suffix
+                let count = 0;
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+
+                const timer = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        num.innerText = target + suffix;
+                        clearInterval(timer);
+                    } else {
+                        num.innerText = Math.floor(count) + suffix;
+                    }
+                }, 16);
+            });
+        }
+    }, { threshold: 0.5 });
+
+    if (statsSection) {
+        statsObserver.observe(statsSection);
+    }
+
+
+    // Intersection Observer for other animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px"
@@ -59,56 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, observerOptions);
-
-    // Team Content Reveal (Split Blocks)
-    const teamBlocks = document.querySelectorAll('.team-info-block');
-    const teamContentObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            } else {
-                entry.target.classList.remove('visible');
-            }
-        });
-    }, { threshold: 0.4, rootMargin: "-30% 0px -30% 0px" }); // Tighter focus area
-
-    teamBlocks.forEach(block => {
-        teamContentObserver.observe(block);
-    });
-
-    const teamDesc = document.querySelector('.team-desc');
-    if (teamDesc) {
-        window.addEventListener('scroll', () => {
-            const rect = teamDesc.getBoundingClientRect();
-            const fadeStart = 200;
-            const fadeEnd = 50;
-
-            let opacity = 1;
-
-            if (rect.top < fadeStart) {
-                opacity = Math.max(0, (rect.top - fadeEnd) / (fadeStart - fadeEnd));
-            }
-
-            teamDesc.style.opacity = opacity;
-        });
-    }
-
-    // Team Photo Blur/Fade Logic (Active Row)
-    const teamRows = document.querySelectorAll('.team-member-row');
-    const teamPhotoObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active-photo');
-            } else {
-                entry.target.classList.remove('active-photo');
-            }
-        });
-    }, { threshold: 0.3, rootMargin: "-10% 0px -10% 0px" });
-    // Trigger when 30% visible, with margins to ensure good overlap handling
-
-    teamRows.forEach(row => {
-        teamPhotoObserver.observe(row);
-    });
 
     // Observe Scope Cards
     const scopeCards = document.querySelectorAll('.scope-card');
@@ -139,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-    }, { threshold: 0.5 }); // Trigger when 50% visible
+    }, { threshold: 0.5 });
 
     whyBlocks.forEach(block => {
         whyObserver.observe(block);
@@ -158,10 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const sectionHeight = processSection.offsetHeight;
             const windowHeight = window.innerHeight;
             const scrollY = window.scrollY;
-
-            // Calculate progress strictly within the section
-            // We want the animation to start when the sticky container locks (approx sectionTop)
-            // and end when we scroll through the 400vh
 
             // Adjust start point so it starts filling as soon as we enter
             const start = sectionTop;
@@ -220,36 +196,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // meet the team photo handler 
-
-
-    const photoCols = document.querySelectorAll('.team-photo-col');
-
-    // Define the area at the top where the fade should happen.
-    // Since your title is there, 150px is a good starting point.
-    const fadeTriggerZone = 150;
-
-    function handlePhotoFade() {
-        photoCols.forEach(col => {
-            const rect = col.getBoundingClientRect();
-
-            if (rect.bottom > 0 && rect.top < window.innerHeight) {
-                if (rect.top < fadeTriggerZone) {
-                    let newOpacity = (rect.top / fadeTriggerZone);
-                    newOpacity = Math.max(0, Math.min(1, newOpacity));
-                    col.style.opacity = newOpacity.toFixed(2);
-                } else {
-                    col.style.opacity = 1;
-                }
-            }
-        });
-    }
-
-    // Listen for scroll events
-    window.addEventListener('scroll', handlePhotoFade, { passive: true });
-    // Run once on load in case the page starts scrolled
-    handlePhotoFade();
-
 
 });

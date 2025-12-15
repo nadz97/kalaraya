@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalaraya+ Architects</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
+    <!-- Hero Anchor for Navigation (Non-fixed) -->
+    <div id="hero" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px;"></div>
+
     <!-- Hero Section -->
-    <header class="hero" id="hero">
+    <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <img src="images/LOGO_TRANSPARANT.png" alt="Kalaraya Logo" class="hero-logo">
@@ -33,16 +34,6 @@
                 </div>
                 <div class="profile-right">
                     <p class="text-body">
-                        <strong>Didirikan pada tahun 2022</strong> oleh <strong>Muhammad Hary Raihan</strong> dan
-                        <strong>Maudy Indah Cahyani</strong>, Kalaraya hadir
-                        dengan komitmen untuk menciptakan karya yang <strong>tidak hanya indah secara estetika</strong>,
-                        tetapi juga
-                        <strong>fungsional dan penuh inovasi</strong>. Transformasi menjadi <strong>KALARAYA+</strong>
-                        dimulai pada tahun <strong>2025</strong>, dengan
-                        bergabungnya <strong>Adhitya Djarot</strong> dan <strong>Ilham Akbar</strong> ke dalam tim.
-                        Kolaborasi ini <strong>memperkuat struktur</strong> dan
-                        <strong>semangat baru</strong> kami dalam menghadirkan solusi arsitektur yang menyeluruh.
-                        <br><br>
                         <strong>KALARAYA+ Architects</strong> siap memberikan layanan di bidang
                         <strong>arsitektur</strong>, <strong>interior</strong>, <strong>perencanaan wilayah
                             (plannologi)</strong>, <strong>dan lingkungan</strong>, dengan pendekatan yang
@@ -53,126 +44,171 @@
                         <strong>dampak</strong>. Kami terus bergerak dengan semangat
                         kolaborasi untuk mewujudkan <strong>#RasaDalamEstetika</strong>.
                     </p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">80+</span>
+                            <span class="stat-label">Planning Finished</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Designs Delivered</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        </div>
-        </div>
+        <!-- Why Choose Us Section -->
+        <section class="why-choose" id="why-choose">
+            <div class="container">
+                <!-- <h2 class="section-title text-center">WHY CHOOSE US</h2> -->
+
+                <div class="why-grid">
+
+                    <div class="why-item">
+                        <div class="icon-circle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M2 22h20M2 13h20M5 13V2h14v11M7 13v9M17 13v9"></path>
+                            </svg>
+                        </div>
+                        <h3 class="why-title">Desain Kontekstual</h3>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="icon-circle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="M9 12l2 2 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="why-title">Profesional & Legal</h3>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="icon-circle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="why-title">Portofolio Beragam</h3>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="icon-circle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="why-title">Tim Kredibel</h3>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="icon-circle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="why-title">Partner Kontraktor</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Gallery Section (Masonry) moved here -->
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title text-center">SELECTED WORKS</h2>
+                <div class="gallery-masonry">
+                    <div class="gallery-item tall">
+                        <img src="images/gallery/gl1.jpg" alt="Contextual Design" class="gallery-img">
+                    </div>
+                    <div class="gallery-item medium"> <img src="images/gallery/gl2.jpg" alt="Modern Residence"
+                            class="gallery-img">
+                    </div>
+                    <div class="gallery-item short">
+                        <img src="images/gallery/gl3.jpg" alt="Construction Detail" class="gallery-img">
+                    </div>
+
+                    <div class="gallery-item medium">
+                        <img src="images/gallery/gl4.jpg" alt="Team Collaboration" class="gallery-img">
+                    </div>
+                    <div class="gallery-item tall">
+                        <img src="images/gallery/gl5.jpg" alt="Architect Portrait" class="gallery-img">
+                    </div>
+                    <div class="gallery-item short">
+                        <img src="images/gallery/gl6.jpg" alt="Landscape Project" class="gallery-img">
+                    </div>
+
+                    <div class="gallery-item short">
+                        <img src="images/gallery/gl7.jpg" alt="Interior View" class="gallery-img">
+                    </div>
+                    <div class="gallery-item tall">
+                        <img src="images/gallery/gl8.jpg" alt="Detailing" class="gallery-img">
+                    </div>
+                    <div class="gallery-item medium">
+                        <img src="images/gallery/gl9.png" alt="Site Visit" class="gallery-img">
+                    </div>
+
+                    <div class="gallery-item tall">
+                        <img src="images/gallery/gl10.png" alt="Principal Architect" class="gallery-img">
+                    </div>
+                    <div class="gallery-item short">
+                        <img src="images/gallery/gl11.png" alt="Facade" class="gallery-img">
+                    </div>
+                    <div class="gallery-item medium">
+                        <img src="images/gallery/gl12.png" alt="Living Room" class="gallery-img">
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Team & Certification Section -->
         <section class="team" id="team">
             <div class="container">
-                <h2 class="section-title">MEET THE TEAM</h2>
-                <p class="team-desc">
-                    Tim Kalaraya+ terdiri dari lulusan universitas ternama di Indonesia, dengan latar belakang
-                    pendidikan S1
-                    dan S2 di bidang arsitektur. Berbekal pengalaman bertahun-tahun di dunia desain dan konstruksi, kami
-                    siap memberikan solusi terbaik untuk setiap proyek Anda
-                </p>
-                <div class="team-list">
-                    <div class="team-member-row">
-                        <div class="team-photo-col">
-                            <img src="images/team/1.png" alt="Adhitya Djarot" class="team-photo">
-                        </div>
-                        <div class="team-info-col">
-                            <!-- Block 1: Identity -->
-                            <div class="team-info-block">
-                                <h3 class="member-name">Adhitya Djarot, S.Ars.</h3>
-                                <p class="member-role">M.U.D Architect + Urban Designer</p>
-                            </div>
-                            <!-- Block 2: Details -->
-                            <div class="team-info-block">
-                                <div class="member-certs">
-                                    <h4>SERTIFIKASI:</h4>
-                                    <ul>
-                                        <li>LEMBAGA PENGEMBANGAN JASA KONSTRUKSI AHLI MADYA PERAWATAN BANGUNAN GEDUNG
-                                        </li>
-                                        <li>ANGGOTA IKATAN ARSITEK INDONESIA</li>
-                                        <li>ANGGOTA IKATAN AHLI RANCANG KOTA INDONESIA</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                <h2 class="section-title text-center">MEET THE TEAM</h2>
+                <div class="team-grid-simple">
+                    <!-- Member 1 -->
+                    <div class="team-card-simple">
+                        <img src="images/team/1.png" alt="Adhitya Djarot" class="team-photo-simple">
+                        <h3 class="member-name-simple">Adhitya Djarot</h3>
+                        <p class="member-role-simple">M.U.D Architect + Urban Designer</p>
                     </div>
-
-                    <div class="team-member-row">
-                        <div class="team-photo-col">
-                            <img src="images/team/2.png" alt="Ar. Muhammad Hary Raihan" class="team-photo">
-                        </div>
-                        <div class="team-info-col">
-                            <!-- Block 1: Identity -->
-                            <div class="team-info-block">
-                                <h3 class="member-name">Ar. Muhammad Hary Raihan. IAI</h3>
-                                <p class="member-role">Architect</p>
-                            </div>
-                            <!-- Block 2: Details -->
-                            <div class="team-info-block">
-                                <div class="member-certs">
-                                    <h4>SERTIFIKASI:</h4>
-                                    <ul>
-                                        <li>SURAT TANDA REGRISTASI ARSITEKTUR DEWAN ARSITEK INDONESIA</li>
-                                        <li>ARSITEK PRAKTIK</li>
-                                        <li>ANGGOTA IKATAN ARSITEK INDONESIA</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Member 2 -->
+                    <div class="team-card-simple">
+                        <img src="images/team/2.png" alt="Muhammad Hary Raihan" class="team-photo-simple">
+                        <h3 class="member-name-simple">Ar. Muhammad Hary Raihan</h3>
+                        <p class="member-role-simple">Architect</p>
                     </div>
-
-                    <div class="team-member-row">
-                        <div class="team-photo-col">
-                            <img src="images/team/3.png" alt="Maudy Indah Cahyani" class="team-photo">
-                        </div>
-                        <div class="team-info-col">
-                            <!-- Block 1: Identity -->
-                            <div class="team-info-block">
-                                <h3 class="member-name">Maudy Indah Cahyani, S.Ars.</h3>
-                                <p class="member-role">Architectural + Interior Designer</p>
-                            </div>
-                            <!-- Block 2: Details -->
-                            <div class="team-info-block">
-                                <div class="member-certs">
-                                    <h4></h4>
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Member 3 -->
+                    <div class="team-card-simple">
+                        <img src="images/team/3.png" alt="Maudy Indah Cahyani" class="team-photo-simple">
+                        <h3 class="member-name-simple">Maudy Indah Cahyani</h3>
+                        <p class="member-role-simple">Architectural + Interior Designer</p>
                     </div>
-
-                    <div class="team-member-row">
-                        <div class="team-photo-col">
-                            <img src="images/team/4.png" alt="Ilham Akbar" class="team-photo">
-                        </div>
-                        <div class="team-info-col">
-                            <!-- Block 1: Identity -->
-                            <div class="team-info-block">
-                                <h3 class="member-name">Ilham Akbar, S.T., M.Ling.</h3>
-                                <p class="member-role">Enviromental Expert</p>
-                            </div>
-                            <!-- Block 2: Details -->
-                            <div class="team-info-block">
-                                <div class="member-certs">
-                                    <h4>SERTIFIKASI:</h4>
-                                    <ul>
-                                        <li>LEMBAGA PENGEMBANGAN JASA KONSTRUKSI</li>
-                                        <li>AHLI MUDA TEKNIK LINGKUNGAN BIDANG JASA</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Member 4 -->
+                    <div class="team-card-simple">
+                        <img src="images/team/4.png" alt="Ilham Akbar" class="team-photo-simple">
+                        <h3 class="member-name-simple">Ilham Akbar</h3>
+                        <p class="member-role-simple">Enviromental Expert</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        </div>
-        </div>
-        </section>
+        <!-- Cleaned up closing tags -->
 
         <!-- Scope of Work Section -->
         <section class="scope" id="scope">
@@ -180,138 +216,64 @@
                 <h2 class="section-title">LINGKUP PEKERJAAN</h2>
                 <div class="scope-grid">
 
-                    <div class="scope-card" style="transition-delay: 100ms;">
+                    <a href="scope-detail.html?service=architecture" target="_blank" class="scope-card simplified"
+                        style="transition-delay: 100ms;">
                         <div class="scope-icon">
                             <img src="images/icon6.png" alt="Desain Arsitektur Icon">
                         </div>
                         <h3 class="scope-title">DESAIN ARSITEKTUR</h3>
-                        <p class="scope-desc">
-                            Desain menyeluruh dari bentuk, fungsi, dan struktur bangunan utama—baik rumah tinggal,
-                            kantor, maupun fasilitas komersial lainnya.
-                        </p>
-                    </div>
+                        <p class="scope-desc">Desain hunian dan komersial yang estetis dan fungsional.</p>
+                    </a>
 
-                    <div class="scope-card" style="transition-delay: 200ms;">
+                    <a href="scope-detail.html?service=interior" target="_blank" class="scope-card simplified"
+                        style="transition-delay: 200ms;">
                         <div class="scope-icon">
                             <img src="images/icon5.png" alt="Desain Interior Icon">
                         </div>
                         <h3 class="scope-title">DESAIN INTERIOR</h3>
-                        <p class="scope-desc">Penataan ruang dalam agar nyaman, efisien, dan estetis. Layanan meliputi:
-                        </p>
-                        <ul class="scope-list">
-                            <li>Layout furniture dan pembagian fungsi ruang</li>
-                            <li>Pemilihan material, warna, pencahayaan</li>
-                            <li>Konsep suasana (moodboard), hingga 3D visualisasi</li>
-                            <li>Cocok untuk rumah, kantor, café, atau ruang komersial</li>
-                        </ul>
-                    </div>
+                        <p class="scope-desc">Penataan ruang yang nyaman, efisien, dan berkarakter.</p>
+                    </a>
 
-                    <div class="scope-card" style="transition-delay: 300ms;">
+                    <a href="scope-detail.html?service=masterplan" target="_blank" class="scope-card simplified"
+                        style="transition-delay: 300ms;">
                         <div class="scope-icon">
                             <img src="images/icon4.png" alt="Masterplan & Landscape Icon">
                         </div>
                         <h3 class="scope-title">MASTERPLAN & LANDSCAPE</h3>
-                        <p class="scope-desc">
-                            Perencanaan kawasan seperti perumahan, resort, atau kompleks, termasuk pembagian zona dan
-                            alur sirkulasi. Perancangan taman, halaman, atau area luar sesuai konsep dan fungsi
-                            bangunan.
-                        </p>
-                    </div>
+                        <p class="scope-desc">Perencanaan kawasan dan lanskap yang terintegrasi alam.</p>
+                    </a>
 
-                    <div class="scope-card" style="transition-delay: 400ms;">
+                    <a href="scope-detail.html?service=permit" target="_blank" class="scope-card simplified"
+                        style="transition-delay: 400ms;">
                         <div class="scope-icon">
                             <img src="images/icon3.png" alt="Perizinan & Gambar Icon">
                         </div>
                         <h3 class="scope-title">PERIZINAN & GAMBAR</h3>
-                        <ul class="scope-list">
-                            <li>
-                                <strong>PBG (Persetujuan Bangunan Gedung):</strong> Layanan pengurusan dokumen izin
-                                bangunan sesuai peraturan pemerintah.
-                            </li>
-                            <li>
-                                <strong>Drafting / Gambar Kerja:</strong> Pembuatan gambar teknis arsitektur yang rapi
-                                dan detail untuk kebutuhan perizinan maupun konstruksi.
-                            </li>
-                        </ul>
-                    </div>
+                        <p class="scope-desc">Pengurusan IMB/PBG dan gambar kerja teknis.</p>
+                    </a>
 
-                    <div class="scope-card" style="transition-delay: 500ms;">
+                    <a href="scope-detail.html?service=survey" target="_blank" class="scope-card simplified"
+                        style="transition-delay: 500ms;">
                         <div class="scope-icon">
                             <img src="images/icon2.png" alt="Survey & Analisa GIS Icon">
                         </div>
                         <h3 class="scope-title">SURVEY & ANALISA GIS</h3>
-                        <ul class="scope-list">
-                            <li>
-                                <strong>Drone Foto & Video Udara:</strong> Dokumentasi lokasi, progres proyek, atau
-                                keperluan visualisasi masterplan.
-                            </li>
-                            <li>
-                                <strong>Survey & Mapping GIS:</strong> Pengukuran lahan dan pemetaan digital dengan
-                                sistem GIS untuk data tapak yang akurat.
-                            </li>
-                        </ul>
-                    </div>
+                        <p class="scope-desc">Pemetaan lahan dan analisa topografi akurat.</p>
+                    </a>
 
-                    <div class="scope-card" style="transition-delay: 600ms;">
+                    <a href="scope-detail.html?service=environment" target="_blank" class="scope-card simplified"
+                        style="transition-delay: 600ms;">
                         <div class="scope-icon">
                             <img src="images/icon1.png" alt="Analisa Lingkungan Icon">
                         </div>
                         <h3 class="scope-title">ANALISA LINGKUNGAN</h3>
-                        <p class="scope-desc">
-                            Bidang analisa lingkungan meliputi kegiatan menilai dan izin dampak suatu kegiatan terhadap
-                            lingkungan, seperti air, udara, dan tanah agar tidak merusak alam dan tetap aman bagi
-                            masyarakat.
-                        </p>
-                    </div>
+                        <p class="scope-desc">Analisa dampak lingkungan (AMDAL/UKL-UPL).</p>
+                    </a>
 
                 </div>
-            </div>
         </section>
 
-        <!-- Why Choose Us Section -->
-        <section class="why-choose" id="why-choose">
-            <div class="why-container">
-                <div class="why-left">
-                    <div class="why-block" data-image="images/wp1.png">
-                        <span class="why-number">01</span>
-                        <h3 class="why-title">Desain Kontekstual</h3>
-                        <p class="why-desc">Setiap karya kami merespon lingkungan sekitar, iklim, dan budaya setempat
-                            untuk menciptakan harmoni.</p>
-                    </div>
-                    <div class="why-block" data-image="images/wp2.jpg">
-                        <span class="why-number">02</span>
-                        <h3 class="why-title">Profesional & Legal</h3>
-                        <p class="why-desc">Studio kami berbadan hukum resmi dan dijalankan oleh arsitek bersertifikat
-                            IAI.</p>
-                    </div>
-                    <div class="why-block" data-image="images/wp3.png">
-                        <span class="why-number">03</span>
-                        <h3 class="why-title">Portofolio Beragam</h3>
-                        <p class="why-desc">Dari hunian pribadi hingga bangunan komersial, pengalaman kami mencakup
-                            berbagai skala proyek.</p>
-                    </div>
-                    <div class="why-block" data-image="images/wp4.png">
-                        <span class="why-number">04</span>
-                        <h3 class="why-title">Tim Kredibel</h3>
-                        <p class="why-desc">Kolaborasi antara arsitek, desainer interior, dan insinyur sipil di bawah
-                            satu atap.</p>
-                    </div>
-                    <div class="why-block" data-image="images/wp5.png">
-                        <span class="why-number">05</span>
-                        <h3 class="why-title">Partner Kontraktor</h3>
-                        <p class="why-desc">Kami memiliki jaringan kontraktor terpercaya untuk memastikan hasil bangun
-                            sesuai desain.</p>
-                    </div>
-                </div>
-                <div class="why-right">
-                    <div class="why-sticky">
-                        <img src="images/why_contextual.png" alt="Why Choose Us" class="why-img visible"
-                            id="why-main-img">
 
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Design Process Section -->
         <section class="process" id="process">
@@ -408,7 +370,7 @@
                         <!-- Existing -->
                         <div class="pricing-card">
                             <h3 class="price-title">ARSITEKTUR LENGKAP</h3>
-                            <div class="price-amount">Rp 150.000<span class="price-unit">/ m²</span></div>
+                            <!-- Price Removed -->
                             <ul class="price-list">
                                 <li>Konsep Desain & 3D Rendering</li>
                                 <li>Gambar Kerja Lengkap (DED)</li>
@@ -421,7 +383,7 @@
                         <!-- New 1 -->
                         <div class="pricing-card">
                             <h3 class="price-title">KONSEP FASADE</h3>
-                            <div class="price-amount">Rp 75.000<span class="price-unit">/ m²</span></div>
+                            <!-- Price Removed -->
                             <ul class="price-list">
                                 <li>3D Modelling Eksterior</li>
                                 <li>Visualisasi 3D Rendering</li>
@@ -434,7 +396,7 @@
                         <!-- New 2 -->
                         <div class="pricing-card">
                             <h3 class="price-title">ARSITEKTUR PREMIUM</h3>
-                            <div class="price-amount">Rp 250.000<span class="price-unit">/ m²</span></div>
+                            <!-- Price Removed -->
                             <ul class="price-list">
                                 <li>Include Interior Layout</li>
                                 <li>Animasi Walkthrough Eksterior</li>
@@ -447,7 +409,7 @@
                         <!-- New 3 -->
                         <div class="pricing-card">
                             <h3 class="price-title">RENOVASI RUMAH</h3>
-                            <div class="price-amount">Start Rp 5 Jt<span class="price-unit">/ Paket</span></div>
+                            <!-- Price Removed -->
                             <ul class="price-list">
                                 <li>Survey Eksisting</li>
                                 <li>Analisa Struktur Sederhana</li>
@@ -466,7 +428,7 @@
                         <!-- Standard -->
                         <div class="pricing-card">
                             <h3 class="price-title">INTERIOR STANDARD</h3>
-                            <div class="price-amount">Rp 250.000<span class="price-unit">/ m²</span></div>
+                            <!-- Price Removed -->
                             <ul class="price-list">
                                 <li>Layout Plan & Moodboard</li>
                                 <li>3D Visual (Standard Quality)</li>
@@ -479,7 +441,7 @@
                         <div class="pricing-card premium">
                             <div class="badge">BEST VALUE</div>
                             <h3 class="price-title">INTERIOR PREMIUM</h3>
-                            <div class="price-amount">Rp 450.000<span class="price-unit">/ m²</span></div>
+                            <!-- Price Removed -->
                             <ul class="price-list">
                                 <li>All in Standard +</li>
                                 <li>3D Visual (Photorealistic)</li>
@@ -491,7 +453,7 @@
                         <!-- New 1 -->
                         <div class="pricing-card">
                             <h3 class="price-title">COMMERCIAL SPACE</h3>
-                            <div class="price-amount">Rp 350.000<span class="price-unit">/ m²</span></div>
+                            <!-- Price Removed -->
                             <ul class="price-list">
                                 <li>Khusus Café / Kantor / Toko</li>
                                 <li>Analisa Flow Pengunjung</li>
@@ -504,7 +466,7 @@
                         <!-- New 2 -->
                         <div class="pricing-card">
                             <h3 class="price-title">DECOR & STYLING</h3>
-                            <div class="price-amount">Rp 150.000<span class="price-unit">/ m²</span></div>
+                            <!-- Price Removed -->
                             <ul class="price-list">
                                 <li>Tanpa Perubahan Dinding</li>
                                 <li>Pemilihan Furniture Loose</li>
@@ -523,7 +485,7 @@
                         <!-- Card 1 -->
                         <div class="pricing-card">
                             <h3 class="price-title">SMALL GARDEN</h3>
-                            <div class="price-amount">Rp 50.000<span class="price-unit">/ m²</span></div>
+                            <!-- Price Removed -->
                             <ul class="price-list">
                                 <li>Konsep Tanaman & Hardscape</li>
                                 <li>Layout Plan sederhana</li>
@@ -535,7 +497,7 @@
                         <!-- Card 2 -->
                         <div class="pricing-card">
                             <h3 class="price-title">RESIDENTIAL LANDSCAPE</h3>
-                            <div class="price-amount">Rp 100.000<span class="price-unit">/ m²</span></div>
+                            <!-- Price Removed -->
                             <ul class="price-list">
                                 <li>Desain Taman Depan & Belakang</li>
                                 <li>3D Visualisasi</li>
@@ -548,7 +510,7 @@
                         <!-- Card 3 -->
                         <div class="pricing-card">
                             <h3 class="price-title">KAWASAN / MASTERPLAN</h3>
-                            <div class="price-amount">Call Us<span class="price-unit">/ Ha</span></div>
+                            <!-- Price Removed -->
                             <ul class="price-list">
                                 <li>Perencanaan Site Plan</li>
                                 <li>Zoning & Sirkulasi</li>
@@ -578,55 +540,23 @@
         </section>
 
         <!-- Gallery Section (Masonry) -->
-        <section class="gallery" id="gallery">
-            <div class="container">
-                <h2 class="section-title text-center">SELECTED WORKS</h2>
-                <div class="gallery-masonry">
-                    <div class="gallery-item tall">
-                        <img src="images/gallery/gl1.jpg" alt="Contextual Design" class="gallery-img">
-                    </div>
-                    <div class="gallery-item medium"> <img src="images/gallery/gl2.jpg" alt="Modern Residence"
-                            class="gallery-img">
-                    </div>
-                    <div class="gallery-item short">
-                        <img src="images/gallery/gl3.jpg" alt="Construction Detail" class="gallery-img">
-                    </div>
-
-                    <div class="gallery-item medium">
-                        <img src="images/gallery/gl4.jpg" alt="Team Collaboration" class="gallery-img">
-                    </div>
-                    <div class="gallery-item tall">
-                        <img src="images/gallery/gl5.jpg" alt="Architect Portrait" class="gallery-img">
-                    </div>
-                    <div class="gallery-item short">
-                        <img src="images/gallery/gl6.jpg" alt="Landscape Project" class="gallery-img">
-                    </div>
-
-                    <div class="gallery-item short">
-                        <img src="images/gallery/gl7.jpg" alt="Interior View" class="gallery-img">
-                    </div>
-                    <div class="gallery-item tall">
-                        <img src="images/gallery/gl8.jpg" alt="Detailing" class="gallery-img">
-                    </div>
-                    <div class="gallery-item medium">
-                        <img src="images/gallery/gl9.png" alt="Site Visit" class="gallery-img">
-                    </div>
-
-                    <div class="gallery-item tall">
-                        <img src="images/gallery/gl10.png" alt="Principal Architect" class="gallery-img">
-                    </div>
-                    <div class="gallery-item short">
-                        <img src="images/gallery/gl11.png" alt="Facade" class="gallery-img">
-                    </div>
-                    <div class="gallery-item medium">
-                        <img src="images/gallery/gl12.png" alt="Living Room" class="gallery-img">
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Gallery Section Moved from here -->
 
 
     </main>
+
+    <!-- Floating Navbar -->
+    <nav class="floating-nav">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#profile" class="nav-link">Profile</a>
+        <a href="#scope" class="nav-link">Scope</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#pricing" class="nav-link">Price</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="career.html" class="nav-link">Career</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
 
     <!-- Footer Section -->
     <footer class="footer" id="contact">
@@ -636,11 +566,11 @@
                 <div class="footer-col">
                     <h2 class="footer-logo">KALARAYA+</h2>
                     <p class="footer-address">
-                        Jl. Arsitek Raya No. 88<br>
-                        Jakarta Selatan, 12000<br>
-                        Indonesia
+                        Jl. Alianyang Gg. Jaya Baru, Sungai Bangkong<br>
+                        Kec. Pontianak Kota, Kota Pontianak<br>
+                        Kalimantan Barat 78116
                     </p>
-                    <p class="footer-contact">info@kalaraya.com<br>+62 812 3456 7890</p>
+                    <p class="footer-contact">kalarayaplusarchitects@gmail.com<br>+62 895-3731-09595</p>
                 </div>
 
                 <!-- Quick Links -->
@@ -660,25 +590,52 @@
                     <h3 class="footer-heading">Connect</h3>
                     <div class="footer-social">
                         <!-- Instagram -->
-                        <a href="#" class="social-icon">
+                        <a href="https://www.instagram.com/kalaraya.architects/" target="_blank" class="social-icon"
+                            aria-label="Instagram">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
-                        <!-- LinkedIn -->
-                        <a href="#" class="social-icon">
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@kalarayaplus.architects" target="_blank" class="social-icon"
+                            aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@Kalaraya.Architects" target="_blank" class="social-icon"
+                            aria-label="YouTube">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path
-                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
                                 </path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                        <!-- Pinterest -->
+                        <a href="https://id.pinterest.com/kalarayaarchitects/" target="_blank" class="social-icon"
+                            aria-label="Pinterest">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                <path
+                                    d="M12 2a10 10 0 0 0-3.66 19.32c-.08-.82-.15-2.08.03-2.98l1.1-4.66s-.28-.56-.28-1.4c0-1.32.77-2.3 1.72-2.3.81 0 1.2.61 1.2 1.34 0 .82-.52 2.05-.79 3.18-.23.95.48 1.72 1.41 1.72 1.7 0 3-1.8 3-4.38 0-2.3-1.65-3.89-4.01-3.89-2.92 0-4.64 2.19-4.64 4.46 0 .88.34 1.83.76 2.34.08.1.1.18.07.28l-.31 1.29c-.05.19-.15.23-.35.14-1.3-.6-2.11-2.48-2.11-4 0-3.25 2.36-6.23 6.81-6.23 3.57 0 6.35 2.55 6.35 5.95 0 3.55-2.24 6.4-5.34 6.4-1.04 0-2.02-.54-2.36-1.18L12 19.5c-.39 1.5-1.42 3.38-1.52 3.55A9.96 9.96 0 0 0 12 22a10 10 0 0 0 10-10A10 10 0 0 0 12 2z">
+                                </path>
+                            </svg>
+                        </a>
+                        <!-- Google Maps -->
+                        <a href="https://www.google.com/maps/place/ARSITEK+DAN+INTERIOR+PONTIANAK+-+KALARAYA%2B+ARCHITECTS/data=!4m2!3m1!1s0x0:0x64c2c9789bf3e8d4?sa=X&ved=1t:2428&ictx=111"
+                            target="_blank" class="social-icon" aria-label="Google Maps">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
                             </svg>
                         </a>
                     </div>
-                    <a href="#" class="btn-whatsapp">
+                    <a href="https://wa.me/62895373109595?text=Halo%20Kalaraya%2B%20Architects%2C%20saya%20tertarik%20untuk%20mendiskusikan%20rencana%20proyek%20saya."
+                        target="_blank" class="btn-whatsapp">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             style="margin-right: 8px;">
                             <path
