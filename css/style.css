@@ -63,7 +63,7 @@ body {
 
 /* Typography */
 .hero-logo {
-    width: 200px;
+    width: 600px;
     height: auto;
     margin-bottom: 2rem;
     display: block;
@@ -1305,7 +1305,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 
     /* Reveal Animation */
-    animation: navbarReveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: navbarReveal 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: 3s;
 }
 
 @keyframes navbarReveal {
@@ -1345,7 +1346,8 @@ body {
         justify-content: flex-start;
         /* Scrollable on mobile if too wide */
         white-space: nowrap;
-        animation: navbarRevealMobile 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation: navbarRevealMobile 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+        animation-delay: 3s;
     }
 
     .floating-nav::-webkit-scrollbar {
