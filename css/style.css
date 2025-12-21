@@ -36,6 +36,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 :root {
@@ -63,7 +64,7 @@ body {
 
 /* Typography */
 .hero-logo {
-    width: 600px;
+    width: 30%;
     height: auto;
     margin-bottom: 2rem;
     display: block;
@@ -71,8 +72,12 @@ body {
     margin-right: auto;
 }
 
+.hero-half .hero-logo {
+    width: 160px;
+}
+
 .hero-title {
-    font-size: 4rem;
+    font-size: 6.4rem;
     font-weight: 900;
     color: #FFFFFF;
     letter-spacing: 2px;
@@ -80,7 +85,7 @@ body {
 }
 
 .section-title {
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-weight: 600;
     color: var(--accent);
     letter-spacing: 1px;
@@ -89,7 +94,7 @@ body {
 }
 
 .text-body {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     line-height: 1.8;
     color: var(--primary);
     margin-bottom: 1.5rem;
@@ -139,6 +144,28 @@ body {
     z-index: 1;
 }
 
+/* Typography for Sub-pages (Career, FAQ, Scope Detail) */
+.main-content-half {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.main-content-half p {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-content-half h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.main-content-half ul,
+.main-content-half li {
+    font-size: 1.6rem;
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
@@ -153,6 +180,8 @@ body {
     margin-top: 100vh;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
 }
+
+
 
 /* Profile Section - Sticky Narrative */
 .profile {
@@ -192,7 +221,7 @@ body {
 }
 
 .text-body {
-    font-size: 1.6rem;
+    font-size: 2.6rem;
     line-height: 1.6;
     color: var(--primary);
     margin-bottom: 0;
@@ -276,14 +305,14 @@ body {
 }
 
 .member-name-simple {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
     color: var(--primary);
 }
 
 .member-role-simple {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     color: var(--accent);
     font-weight: 500;
 }
@@ -300,15 +329,10 @@ body {
     }
 }
 
-.team {
-    padding: 8rem 0;
-    background-color: var(--secondary);
-}
-
 /* Team Section - Split Layout */
 /* Team Section - Sticky Photo Split Layout */
 .team {
-    padding: 8rem 0;
+    padding: 15rem 0;
     background-color: var(--secondary);
 }
 
@@ -385,7 +409,7 @@ body {
 }
 
 .member-name {
-    font-size: 2.5rem;
+    font-size: 4rem;
     /* Bigger */
     font-weight: 900;
     color: var(--primary);
@@ -394,14 +418,14 @@ body {
 }
 
 .member-role {
-    font-size: 1.25rem;
+    font-size: 2rem;
     color: var(--accent);
     margin-bottom: 2rem;
     font-weight: 600;
 }
 
 .member-certs h4 {
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--primary);
     margin-bottom: 1rem;
@@ -415,7 +439,7 @@ body {
 }
 
 .member-certs li {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     color: var(--primary);
     margin-bottom: 0.5rem;
     font-weight: 300;
@@ -462,7 +486,7 @@ body {
 /* --- Base Container --- */
 .scope {
     /* Reduced padding to fit "1 Screen" */
-    padding: 4rem 0;
+    padding: 15rem 0;
     background-color: #fff;
     overflow: hidden;
 }
@@ -477,7 +501,7 @@ body {
 .section-title {
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-weight: 700;
     color: #222;
     text-transform: uppercase;
@@ -560,7 +584,7 @@ body {
 
 /* 2. Title */
 .scope-title {
-    font-size: 1.25rem;
+    font-size: 2rem;
     /* Reduced from 2.2rem to fit grid */
     font-weight: 700;
     color: #222;
@@ -572,7 +596,7 @@ body {
 
 /* 3. Description */
 .scope-desc {
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     /* Reduced from 1.3rem to fit grid */
     color: #666;
     line-height: 1.6;
@@ -640,7 +664,7 @@ body {
     margin-left: 0;
     text-align: left;
     margin-bottom: 4rem;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     line-height: 1.6;
     color: var(--primary);
     will-change: opacity;
@@ -663,7 +687,7 @@ body {
 }
 
 .gallery {
-    padding: 8rem 0;
+    padding: 10rem 0;
     background-color: var(--secondary);
 }
 
@@ -721,7 +745,7 @@ body {
     display: block;
 
     /* Effects */
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
 }
 
@@ -765,7 +789,7 @@ body {
 }
 
 .stat-number {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: 900;
     color: var(--primary);
     line-height: 1;
@@ -773,7 +797,7 @@ body {
 }
 
 .stat-label {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     color: var(--accent);
     font-weight: 600;
     text-transform: uppercase;
@@ -858,7 +882,7 @@ body {
 
 /* Title Styling */
 .why-title {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #222;
     margin: 0;
@@ -913,23 +937,20 @@ body {
 
 
 /* Design Process Section */
+/* Design Process Section */
 .process {
-    height: 400vh;
-    /* Long scroll area */
+    padding: 8rem 0;
     position: relative;
     background-color: #F2F2F2;
     /* Slightly darker than white */
 }
 
 .process-sticky {
-    position: sticky;
-    top: 0;
-    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden;  <-- Removed to allow popup shadows if any */
 }
 
 .process-timeline-wrapper {
@@ -963,6 +984,7 @@ body {
     background-color: var(--primary);
     z-index: 2;
     border-radius: 2px;
+    transition: width 4s ease-out;
 }
 
 /* Steps Wrapper */
@@ -1001,7 +1023,7 @@ body {
     margin-bottom: 2rem;
     color: var(--accent);
     transition: all 0.3s;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
 }
 
 .process-step.active .step-icon {
@@ -1018,7 +1040,7 @@ body {
 }
 
 .step-title {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     font-weight: 900;
     color: var(--primary);
     letter-spacing: 1px;
@@ -1026,7 +1048,7 @@ body {
 }
 
 .step-desc {
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     color: var(--primary);
     font-weight: 300;
     line-height: 1.5;
@@ -1040,18 +1062,43 @@ body {
         padding: 0 1rem;
     }
 
-    .step-title {
-        font-size: 0.7rem;
+    /* Switch to Vertical Layout to prevent overflow */
+    .process-steps {
+        flex-direction: column;
+        gap: 2rem;
     }
 
-    .step-icon {
-        width: 40px;
-        height: 40px;
+    .process-step {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.5rem 1.5rem;
+        text-align: left;
+        width: 100%;
     }
 
     .process-line-bg,
     .process-line-fill {
-        top: 20px;
+        display: none;
+    }
+
+    .step-icon {
+        grid-row: 1 / span 2;
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .step-title {
+        font-size: 1.6rem;
+        margin: 0;
+        align-self: center;
+    }
+
+    .step-desc {
+        max-width: 100%;
+        font-size: 1.4rem;
+        grid-column: 2;
     }
 }
 
@@ -1077,7 +1124,7 @@ body {
     background: transparent;
     border: 2px solid #E0E0E0;
     padding: 0.8rem 2rem;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--accent);
     cursor: pointer;
@@ -1143,7 +1190,7 @@ body {
 }
 
 .price-title {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     font-weight: 900;
     color: var(--primary);
     margin-bottom: 1rem;
@@ -1151,14 +1198,14 @@ body {
 }
 
 .price-amount {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: 900;
     color: var(--primary);
     margin-bottom: 2rem;
 }
 
 .price-unit {
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 400;
     color: var(--accent);
 }
@@ -1167,7 +1214,7 @@ body {
     list-style: none;
     margin-bottom: 3rem;
     text-align: left;
-    padding: 0 1rem;
+    padding: 0 3rem;
 }
 
 .price-list li {
@@ -1175,6 +1222,7 @@ body {
     position: relative;
     padding-left: 1.5rem;
     font-weight: 300;
+    font-size: 1.6rem;
 }
 
 .price-list li::before {
@@ -1193,6 +1241,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s;
+    font-size: 1.6rem;
 }
 
 .btn-price:hover {
@@ -1222,7 +1271,7 @@ body {
     background-color: var(--primary);
     color: white;
     padding: 0.5rem 1rem;
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -1244,7 +1293,7 @@ body {
 }
 
 .footer-title {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     font-weight: 900;
     color: var(--primary);
     margin-bottom: 0.5rem;
@@ -1253,12 +1302,14 @@ body {
 .footer-desc {
     color: var(--primary);
     font-weight: 300;
+    font-size: 1.6rem;
 }
 
 .btn-gold {
     background-color: #D4AF37;
     border-color: #D4AF37;
     color: white;
+    font-size: 1.6rem;
 }
 
 .btn-gold:hover {
@@ -1276,7 +1327,7 @@ body {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px dashed var(--accent);
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     transition: color 0.3s;
 }
 
@@ -1324,7 +1375,7 @@ body {
 .nav-link {
     color: #fff;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     font-weight: 500;
     letter-spacing: 0.5px;
     transition: color 0.3s, transform 0.2s;
@@ -1337,23 +1388,6 @@ body {
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-    .floating-nav {
-        padding: 0.8rem 1.5rem;
-        gap: 1rem;
-        width: 90%;
-        overflow-x: auto;
-        justify-content: flex-start;
-        /* Scrollable on mobile if too wide */
-        white-space: nowrap;
-        animation: navbarRevealMobile 1s cubic-bezier(0.22, 1, 0.36, 1) both;
-        animation-delay: 3s;
-    }
-
-    .floating-nav::-webkit-scrollbar {
-        display: none;
-    }
-}
 
 @keyframes navbarRevealMobile {
     0% {
@@ -1383,7 +1417,7 @@ body {
 }
 
 .footer-logo {
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-weight: 900;
     margin-bottom: 1.5rem;
     letter-spacing: 2px;
@@ -1391,7 +1425,7 @@ body {
 
 .footer-address,
 .footer-contact {
-    font-size: 1rem;
+    font-size: 1.6rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
     opacity: 0.8;
@@ -1399,7 +1433,7 @@ body {
 }
 
 .footer-heading {
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
@@ -1412,6 +1446,7 @@ body {
 
 .footer-links li {
     margin-bottom: 1rem;
+    font-size: 1.6rem;
 }
 
 .footer-links a {
@@ -1501,4 +1536,364 @@ body {
         text-align: center;
         gap: 2rem;
     }
+
+    /* Fix hero logo size for mobile */
+    .hero-logo {
+        width: 140px;
+        max-width: 100%;
+    }
+
+    /* --- Gallery Mobile Optimization --- */
+    .gallery-masonry {
+        column-count: 2 !important;
+        column-gap: 15px !important;
+    }
+
+    .gallery-item {
+        margin-bottom: 15px !important;
+    }
+
+    /* --- Text Scaling --- */
+    .hero-title {
+        font-size: 4rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1.6rem !important;
+    }
+
+    .section-title {
+        font-size: 2.4rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .member-name-simple {
+        font-size: 1.6rem !important;
+    }
+
+    .scope-title {
+        font-size: 1.6rem !important;
+    }
+
+    /* Fix container padding to remove gaps on mobile */
+    .container {
+        padding: 0 10px !important;
+    }
+
+    /* Prevent overflow from long text (like email) */
+    .footer-contact {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Force 1 column for very small screens (320px) to prevent layout break */
+    .gallery-masonry {
+        column-count: 1 !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-footer-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+}
+
+/* ========================================
+   MOBILE HAMBURGER MENU
+   ======================================== */
+
+/* Hide hamburger button on desktop, show floating nav */
+.menu-toggle {
+    display: none;
+}
+
+/* Mobile Menu Toggle Button (Circular Hamburger) */
+@media (max-width: 768px) {
+
+    /* Hide desktop floating nav on mobile */
+    .floating-nav {
+        display: none;
+    }
+
+    /* Show hamburger button on mobile */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        position: fixed;
+        top: 2rem;
+        right: 1rem;
+        width: 50px;
+        height: 50px;
+        background: rgba(49, 54, 63, 0.9);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1001;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        padding: 0;
+
+        /* Same reveal animation as navbar */
+        animation: menuButtonReveal 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+        animation-delay: 3s;
+    }
+
+    .hamburger-line {
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+
+    /* Animate hamburger to X when menu is open */
+    .menu-toggle.active .hamburger-line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .hamburger-line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Fix hero logo size for mobile - Max width 80vw to prevent overflow */
+    .hero-logo {
+        width: 80vw;
+        max-width: 300px;
+    }
+}
+
+@keyframes menuButtonReveal {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 2rem;
+        opacity: 1;
+    }
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 54, 63, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Close Button */
+.menu-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 3.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-family: var(--font-main);
+    line-height: 1;
+    padding: 0;
+}
+
+.menu-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    transform: rotate(90deg);
+}
+
+/* Mobile Navigation Links */
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.mobile-nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+/* Stagger animation for menu items */
+.mobile-menu-overlay.active .mobile-nav-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu-overlay.active .mobile-nav-link:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.mobile-menu-overlay.active .mobile-nav-link:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.mobile-menu-overlay.active .mobile-nav-link:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.mobile-menu-overlay.active .mobile-nav-link:nth-child(4) {
+    transition-delay: 0.25s;
+}
+
+.mobile-menu-overlay.active .mobile-nav-link:nth-child(5) {
+    transition-delay: 0.3s;
+}
+
+.mobile-menu-overlay.active .mobile-nav-link:nth-child(6) {
+    transition-delay: 0.35s;
+}
+
+.mobile-menu-overlay.active .mobile-nav-link:nth-child(7) {
+    transition-delay: 0.4s;
+}
+
+.mobile-menu-overlay.active .mobile-nav-link:nth-child(8) {
+    transition-delay: 0.45s;
+}
+
+.mobile-nav-link:hover {
+    color: var(--accent);
+    transform: translateX(10px);
+}
+
+/* ========================================
+   BLOG DETAIL PAGE STYLES
+   ======================================== */
+.blog-meta {
+    font-size: 1.4rem;
+    color: var(--accent);
+    /* Uses golden accent */
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+.blog-featured-img {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 4rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.blog-body {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    /* Reading mode */
+}
+
+.blog-body p {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    color: var(--primary);
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.blog-body h2 {
+    font-size: 2.8rem;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.blog-body h3 {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.blog-quote {
+    border-left: 4px solid var(--accent);
+    padding: 1rem 0 1rem 2rem;
+    margin: 3rem 0;
+    font-style: italic;
+    color: #555;
+    font-size: 1.8rem;
+    background: linear-gradient(to right, #f9f9f9, transparent);
+}
+
+.project-specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+    padding: 3rem;
+    background: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.spec-item h4 {
+    font-size: 1.2rem;
+    color: #888;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.spec-item p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 0 !important;
+    /* Override default p margin */
+    color: var(--primary);
 }

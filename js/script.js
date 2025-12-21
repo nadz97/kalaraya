@@ -127,43 +127,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // Design Process Scroll Animation
+    // Animated Design Process (Intersection Observer)
     const processSection = document.getElementById('process');
     const processFill = document.getElementById('process-fill');
     const processSteps = document.querySelectorAll('.process-step');
 
     if (processSection && processFill) {
-        window.addEventListener('scroll', () => {
-            const sectionTop = processSection.offsetTop;
-            const sectionHeight = processSection.offsetHeight;
-            const windowHeight = window.innerHeight;
-            const scrollY = window.scrollY;
+        const processObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                // Fill the line
+                processFill.style.width = '100%';
 
-            // Adjust start point so it starts filling as soon as we enter
-            const start = sectionTop;
-            const end = sectionTop + sectionHeight - windowHeight;
+                // Staggered animation for steps
+                processSteps.forEach((step, index) => {
+                    setTimeout(() => {
+                        step.classList.add('active');
+                    }, 500 + (index * 900)); // Slower stagger
+                });
 
-            let progress = (scrollY - start) / (end - start);
+                // Unobserve after running once
+                processObserver.unobserve(processSection);
+            }
+        }, {
+            threshold: 0.3
+        }); // Trigger when 30% visible
 
-            if (progress < 0) progress = 0;
-            if (progress > 1) progress = 1;
-
-            // Update line width
-            processFill.style.width = `${progress * 100}%`;
-
-            processSteps.forEach((step, index) => {
-                let threshold = 0;
-                if (index === 1) threshold = 0.33;
-                if (index === 2) threshold = 0.66;
-                if (index === 3) threshold = 0.95;
-
-                if (progress >= threshold) {
-                    step.classList.add('active');
-                } else {
-                    step.classList.remove('active');
-                }
-            });
-        });
+        processObserver.observe(processSection);
     }
 
     // Pricing Toggle Logic
@@ -196,5 +185,43 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (menuToggle && mobileMenu) {
+        // Open menu
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            menuToggle.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        // Close menu
+        const closeMenu = () => {
+            mobileMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        };
+
+        if (menuClose) {
+            menuClose.addEventListener('click', closeMenu);
+        }
+
+        // Close menu when clicking a link
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Close menu when clicking overlay background
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                closeMenu();
+            }
+        });
+    }
 
 });
