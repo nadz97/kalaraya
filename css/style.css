@@ -134,6 +134,13 @@ body {
     margin-top: 50vh;
 }
 
+@media screen and (max-width: 450px) {
+    .main-content {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
