@@ -1615,6 +1615,20 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    .pricing-toggle-wrapper {
+        gap: 0.5rem;
+    }
+
+    .pricing-toggle {
+        padding: 0.6rem 1rem;
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+    }
+}
+
+
+
 /* ========================================
    MOBILE HAMBURGER MENU
    ======================================== */
